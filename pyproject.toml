@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "vizflow"
+version = "0.1.0"
+description = "Visualization tools for flow matching models on single-cell / flow cytometry data"
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=2.1",
+    "numpy",
+    "matplotlib",
+    "seaborn",
+    "scanpy",
+    "anndata",
+    "umap-learn",
+    "torchdyn",
+    "torchcfm",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff", "black"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
